@@ -1,29 +1,24 @@
 # cockpit
+(WIP)
+Manage NPM projects across your filesystem
 
-## Project setup
+## Install
+``` bash 
+npm i -g cockpitjs
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+Or clone this project and 
+``` bash 
+npm i -g
 ```
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
+## Usage
+``` bash
+cockpitjs
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## TODO
+ -  Walker to detect npm project
+ -  Check dependencies of each projects
+ -  Update outdated projects
+ -  Check vulnerabilities
+ -  Explain vulnerabilities if possible
