@@ -1,7 +1,6 @@
 {
-  "name": "cockpitjs",
+  "name": "@iryu54/cockpitjs",
   "version": "0.1.1",
-  "private": true,
   "main": "server/bin/www",
   "bin": {
     "cockpit": "./server/bin/www"

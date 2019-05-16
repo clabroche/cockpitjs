@@ -4,7 +4,7 @@ Manage NPM projects across your filesystem
 
 ## Install
 ``` bash 
-npm i -g cockpitjs
+npm i -g @iryu54/cockpitjs
 ```
 Or clone this project and 
 ``` bash 
