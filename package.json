@@ -1,6 +1,6 @@
 {
   "name": "@iryu54/cockpitjs",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "main": "server/bin/www",
   "bin": {
     "cockpit": "./server/bin/www"
