@@ -50,7 +50,7 @@
     "vue-template-compiler": "^2.5.21"
   },
   "files": [
-    "server/public"
+    "server"
   ],
   "eslintConfig": {
     "root": true,
