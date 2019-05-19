@@ -9,7 +9,6 @@
     "serve": "NODE_ENV=dev concurrently --kill-others \"vue-cli-service serve\" \"nodemon server/bin/www\"",
     "prepublish": "npm run build",
     "build": "vue-cli-service build",
-    "postinstall": "npm run build",
     "start": "npm run build",
     "lint": "vue-cli-service lint",
     "commit": "git cz"
