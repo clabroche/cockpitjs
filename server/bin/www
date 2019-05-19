@@ -88,6 +88,6 @@ function onListening() {
     : 'port ' + addr.port;
   console.log('Listening on ' + bind);
   if (process.env.NODE_ENV !== 'dev') {
-    open('http://localhost:3000')
+    open('http://localhost:' + addr.port)
   }
 }
