@@ -1,5 +1,6 @@
 const fs = require('fs-extra')
 const pathfs = require('path')
+const npm = require('./npm')
 const PromiseB = require('bluebird')
 process.on('message', async path => {
   const dirs = []
@@ -7,18 +8,19 @@ process.on('message', async path => {
   await fs
     .readdir(path)
     .then(async files => {
-      const npmPath = files.includes('package.json')
-        ? path : null
+      const npmInfos = files.includes('package.json')
+        ? await npm.getNpmInfos(path) : null
       await PromiseB.map(files, async file => {
         if(file.charAt(0) === '.') return
-        const filePath = pathfs.resolve(path, file)
-        const stat = await fs.stat(filePath)
-        if(!npmPath && stat.isDirectory() && !filePath.includes('node_modules') && file.charAt(0) !== '.') {
-          dirs.push(filePath)
+        const absolutePath = pathfs.resolve(path, file)
+        const stat = await fs.stat(absolutePath)
+        if(!npmInfos && stat.isDirectory() && !absolutePath.includes('node_modules') && file.charAt(0) !== '.') {
+          dirs.push(absolutePath)
         }
       })
+
       process.send({
-        dirs, npmPath
+        dirs, npmInfos
       })
     })
 });

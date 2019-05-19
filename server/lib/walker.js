@@ -16,7 +16,7 @@ module.exports.import = async path => {
     for (var i = 0; i < nbCpus; i++) {
       const fork = cp.fork(pathfs.resolve(__dirname, './walkerFork.js'));
       fork.on('message', function (data) {
-        if(data.npmPath) npms.push(data.npmPath)
+        if(data.npmInfos) npms.push(data.npmInfos)
         dirs.push(...data.dirs)
         forks.push(this);
       });
