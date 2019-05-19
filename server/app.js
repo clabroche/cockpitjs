@@ -21,4 +21,7 @@ app.use('/api/v1/', indexRouter);
 app.use('/api/v1/status', require('./routes/status'));
 app.use('/api/v1/fs', require('./routes/fs'));
 
+app.use(function(req, res, next){
+  res.redirect('/')
+});
 module.exports = app;
