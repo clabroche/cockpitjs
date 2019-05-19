@@ -13,12 +13,17 @@ npm i -g
 
 ## Usage
 ``` bash
-cockpitjs
+cockpit
 ```
 
+## Screenshots
+Projects:
+![projects](./screenshot-projects.png)
+
+Project:
+![projects](./screenshot-project.png)
+
 ## TODO
- -  Walker to detect npm project
- -  Check dependencies of each projects
  -  Update outdated projects
  -  Check vulnerabilities
  -  Explain vulnerabilities if possible
